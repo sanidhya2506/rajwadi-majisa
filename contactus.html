@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasol Dhaam - Majisa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- ✅ Correct Font Awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <section class="sub-header"> 
+        <nav>
+            <a href="index.html">
+                <img src="https://i.pinimg.com/736x/08/0d/10/080d10c55fe1058582beb56d1e24bdd9.jpg" alt="LOGO">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT MAJISA</a></li>
+                    <li><a href="herfamily.html">HER FAMILY</a></li>
+                    <li><a href="templeinfo.html">TEMPLE INFO</a></li>
+                    <li><a href="contactus.html">CONTACT US</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-times" id="closeMenuIcon" onclick="hideMenu()"></i>
+            <i class="fa fa-bars" id="openMenuIcon" onclick="showMenu()"></i>
+        </nav>
+        <h1>Contact Us</h1>
+    </section>
+<!--- contact us ----->
+<section class="location">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7355467.194009121!2d65.15851855596937!3d25.818854000000023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3943eed924c9a667%3A0xe8a47dc0d38db7c!2sJasol-Dham!5e0!3m2!1sen!2sin!4v1755663075132!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+
+<section class="contact-us"> 
+    <div class="row">
+        <div class="contact-col">
+            <div>
+                <i class="fa fa-home" ></i>
+                <span>
+                    <h5>Majisa Dham</h5>
+                    <p>Jasol, Rajasthan, IN</p>
+                </span>
+            </div>
+        </div>
+        <div class="contact-col">
+                        <div>
+                <i class="fa fa-phone" ></i>
+                <span>
+                    <h5> +91 7378274812</h5>
+                    <p>Monday to Sunday, 8AM to 10PM</p>
+                </span>
+            </div>
+        </div>
+        <div class="contact-col">
+                        <div>
+                <i class="fa fa-envelope" ></i>
+                <span>
+                    <h5> sanidhya2506@gmail.com</h5>
+                    <p>email for query</p>
+                </span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<!--- footer----->
+
+<section class="footer">
+    <h3>About Us</h3>
+    <p>Dedicated to Majisa, the divine mother goddess of Jasol. This site shares her history, temple details, and festivals celebrated with devotion.</p>
+    <div class="icons">
+<a href="https://www.facebook.com/login/" target="_blank"><i class="fa fa-facebook"></i></a>
+    <a href="https://twitter.com/i/flow/login" target="_blank"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.instagram.com/sanidhya.does?utm_source=qr&igsh=MTZ4czlxM254bHlnNw==" target="_blank"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/sanidhya-sharma-22ba91237/" target="_blank"><i class="fa fa-linkedin"></i></a>
+    </div>
+    <p>Made with <i class="fa fa-heart-o" ></i> by sanidhya sharma </p>
+</section>
+
+
+        <script>
+    var navLinks = document.getElementById("navLinks");
+    var openMenuIcon = document.getElementById("openMenuIcon"); // Get hamburger icon
+    var closeMenuIcon = document.getElementById("closeMenuIcon"); // Get close icon
+
+    // Initial state: hide close icon on page load
+    closeMenuIcon.style.display = "none"; 
+
+    function showMenu(){
+        navLinks.style.right = "0"; // Slide menu in
+        openMenuIcon.style.display = "none"; // Hide hamburger icon
+        closeMenuIcon.style.display = "block"; // Show close icon
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px"; // Slide menu out
+        openMenuIcon.style.display = "block"; // Show hamburger icon
+        closeMenuIcon.style.display = "none"; // Hide close icon
+    }
+</script>
+</body>
+</html>

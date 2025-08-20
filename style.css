@@ -1,0 +1,436 @@
+/* Reset & Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    /* This is critical to prevent horizontal scrolling when the fixed menu is off-screen */
+    overflow-x: hidden; 
+}
+
+/* --- Header Section (for index.html - with full height background) --- */
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(https://i.pinimg.com/736x/4a/15/e8/4a15e80b778f31e44102e02c0e30019d.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+
+
+/* --- Sub-Header Section (for other pages - with a smaller header background) --- */
+.sub-header {
+    height: 50vh; /* Consistent header height for sub-pages */
+    width: 100%;
+    /* Corrected image URL (73x -> 736x) */
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(https://i.pinimg.com/736x/f8/8f/4e/f88f4e383af82e9cd51f1266858c8da5.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+.sub-header h1 {
+    margin-top: 100px; /* Positions the H1 title within sub-headers */
+}
+
+/* --- Navigation Container (Applies to nav on all pages) --- */
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 50px; /* Logo size */
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Desktop Navigation Links (Visible and styled horizontally on larger screens) */
+.nav-links {
+    flex: 1; /* Takes up available space */
+    text-align: right;
+    position: static; /* Default, non-fixed positioning for desktop */
+    height: auto; /* Auto height for desktop */
+    width: auto; /* Auto width for desktop */
+    background: none; /* No background color on desktop */
+    display: flex; /* Arranges links horizontally */
+    justify-content: flex-end; /* Aligns links to the right */
+}
+
+.nav-links ul {
+    list-style: none; /* Removes bullet points */
+    display: flex; /* Arranges list items horizontally */
+}
+
+.nav-links ul li {
+    display: inline-block; /* Ensures proper spacing and click area */
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff; /* White text for links */
+    text-decoration: none; /* Removes underline */
+    font-size: 13px;
+}
+
+/* Underline effect on hover for desktop links */
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336; /* Red color */
+    display: block;
+    margin: auto;
+    transition: 0.5s; /* Smooth transition */
+}
+
+.nav-links ul li:hover::after {
+    width: 100%; /* Expands underline on hover */
+}
+
+/* Hide menu icons by default (on desktop - they'll be shown only on mobile) */
+nav .fa {
+    display: none;
+}
+
+/* --- Text Box (Specific to the home page's main header) --- */
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 30px; /* Keep your existing font-size */
+    color: #fff;
+    line-height: 1.5; /* Add this line or adjust the value */
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.hero-btn:hover {
+    border: 1px solid #f44336;
+    background-color: #f44336;
+    transition: 1s;
+}
+
+/* --- General Content Sections (Applies to all pages) --- */
+.course, .campus, .about-us, .location, .contact-us {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px; /* General top padding for content sections */
+}
+.course { padding-top: 100px; } /* Specific padding for the 'course' section */
+.location { padding: 80px 0; } /* Specific padding for 'location' section */
+.contact-us { padding-bottom: 50px; } /* Specific padding for 'contact-us' section */
+
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p {
+    color: #777;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 10px;
+}
+
+/* General Row/Column Layouts (Used for various multi-column sections) */
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows columns to wrap to next line on smaller screens */
+    gap: 20px; /* Space between columns */
+}
+
+/* Course Columns */
+.course-col {
+    flex-basis: 31%; /* Sets width for 3 columns per row with spacing */
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    transition: 0.5s;
+}
+h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.course-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+/* Campus Columns */
+.campus-col {
+    flex-basis: 30%; /* Sets width for 3 columns per row with spacing */
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.campus-col img {
+    width: 100%;
+    height: 250px; /* Fixed height for consistent image display */
+    object-fit: cover; /* Crops image to fit the container */
+    display: block;
+    border-radius: 10px;
+}
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover {
+    background: rgba(226,0,0,0.7); /* Red overlay on hover */
+}
+.layer h3 {
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0; /* Hidden initially */
+    transition: 0.5s;
+}
+.layer:hover h3 {
+    bottom: 49%; /* Moves up on hover */
+    opacity: 1; /* Becomes visible on hover */
+}
+
+/* About Page Specific Styles */
+.about-us .row {
+    align-items: center;
+    justify-content: space-between;
+}
+.about-col {
+    flex: 1 1 45%; /* Allows column to grow/shrink, max 45% width */
+    padding: 20px;
+    text-align: left;
+}
+.about-col img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 8px;
+}
+.about-col h1 {
+    padding-top: 0;
+    padding-left: 20px;
+    text-align: left;
+}
+.about-col p {
+    padding: 15px 0 25px;
+    padding-left: 20px;
+    text-align: left;
+}
+.red-btn {
+    border: 1px solid #f44336;
+    background: transparent;
+    color: #f44336;
+    display: block; /* Ensures it takes up full width for margin auto to work */
+    width: fit-content; /* Shrinks to content size */
+    margin: 20px auto 0; /* Centers the button horizontally */
+}
+.red-btn:hover {
+    color: #fff;
+}
+
+/* Contact Us Specific Styles */
+.location iframe {
+    width: 100%;
+}
+.contact-us .row {
+    justify-content: space-around; /* Distributes items with space around them */
+}
+.contact-col {
+    flex-basis: 30%; /* Sets width for 3 columns per row */
+    margin-bottom: 30px;
+    display: flex;
+    align-items: flex-start; /* Aligns content to the top within the column */
+    flex-direction: column; /* Stacks icon and text vertically within the column */
+}
+.contact-col div {
+    display: flex;
+    align-items: center; /* Aligns icon and text horizontally */
+    margin-bottom: 10px; /* Space between contact lines */
+}
+.contact-col div .fa {
+    font-size: 28px;
+    color: #f44336;
+    margin-right: 20px;
+    margin-left: 0;
+}
+.contact-col div h5 {
+    margin-bottom: 5px;
+}
+.contact-col div p {
+    font-size: 14px;
+    color: #777;
+    padding: 0; /* Resets default padding for paragraphs */
+}
+
+/* --- Footer --- */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer h3 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.icons a {
+    color: #f44336;
+    margin: 0 5px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.icons a:hover {
+    color: #ff0000;
+}
+.fa-heart-o {
+    color: #f44336;
+}
+
+/* ============================================== */
+/* --- GLOBAL Mobile Media Query (max-width: 700px) --- */
+/* Styles within this block apply ONLY when the screen width is 700px or less */
+/* ============================================== */
+@media(max-width: 700px){
+    /* General Mobile Adjustments for text and layout */
+    h1 {
+        font-size: 28px; /* Smaller headings for mobile */
+    }
+    p {
+        font-size: 14px; /* Standard paragraph size on mobile */
+    }
+    .text-box h1 {
+        font-size: 28px; /* Ensure specific h1 in text-box is also smaller */
+    }
+    .text-box p {
+        font-size: 16px; /* A bit larger for main intro text for readability */
+        margin: 10px 0 20px; /* Adjusted margin */
+    }
+    
+    /* General row behavior for mobile: stack columns vertically */
+    .row {
+        flex-direction: column;
+        align-items: center; /* Center items when stacked */
+        margin-top: 20px; /* Reduce top margin for less empty space */
+        gap: 0; /* Remove gap when stacking columns */
+    }
+    /* All content columns take full width on mobile */
+    .course-col, .campus-col, .about-col, .contact-col {
+        flex-basis: 100%; /* Take full width on mobile */
+        margin-bottom: 20px; /* Consistent margin between stacked items */
+        padding: 15px; /* Adjust padding for mobile */
+    }
+
+    /* Mobile Navigation Specifics */
+    .nav-links {
+        position: fixed; /* Ensures menu overlays content, doesn't push it */
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px; /* This makes it hidden initially off-screen */
+        text-align: left;
+        z-index: 1000; /* High z-index to ensure it's on top of other content */
+        transition: 1s; /* Smooth slide transition */
+        padding-top: 50px; /* Space from top for close icon/logo */
+        display: block; /* Ensures menu container is treated as a block for positioning */
+    }
+    .nav-links ul {
+        padding: 0; /* Remove default padding from ul to prevent extra space */
+        display: block; /* Ensure list items stack */
+    }
+    .nav-links ul li {
+        display: block; /* Ensures each link takes a full line */
+        padding: 10px 20px; /* More padding for clickable area on mobile */
+    }
+    /* Mobile Icon Management (Hamburger and Close) */
+    nav .fa { /* Default for icons on mobile */
+        display: none; /* Hide both by default on mobile. JS will control visibility. */
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+        z-index: 1001; /* Higher z-index than nav-links so icons are clickable */
+    }
+    /* Show only the open menu icon by default on mobile */
+    nav #openMenuIcon {
+        display: block; 
+    }
+    /* Position the close icon within the mobile menu */
+    nav #closeMenuIcon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: none; /* Hidden by default, shown by JS when menu is open */
+    }
+
+    /* About Page Mobile specific adjustments */
+    .about-col h1, .about-col p {
+        padding-left: 0; /* Remove left padding for centering */
+        text-align: center;
+    }
+    .red-btn {
+        margin: 20px auto; /* Center button */
+    }
+
+    /* Contact Page Mobile specific adjustments */
+    .contact-col {
+        align-items: flex-start; /* Align contact details to the left */
+        margin-left: 10%; /* Indent slightly from the screen edge */
+    }
+    .contact-col div {
+        margin-bottom: 20px; /* Space between each contact line */
+    }
+}
+
